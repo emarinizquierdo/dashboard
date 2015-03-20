@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--
+Copyright 2012 Google Inc.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+Author: Eric Bidelman (ericbidelman@chromium.org)
+-->
+<html data-ng-app="gDriveApp" ng-csp="">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" media="all" href="css/bootstrap.css">
+    <link rel="stylesheet" media="all" href="css/main.css">
+    <base target="_blank">
+    <link rel="stylesheet" href="js/jqueryui.css">
+
+</head>
+
+<body data-ng-controller="DocsController">
+
+    <section id="main">
+        <nav>
+            <button id="authorize-button" class="btn" data-ng-click="toggleAuth(true)">{{authButtonLabel()}}</button>
+            <button class="btn" data-ng-click="fetchDocs(flase)">Refresh</button>
+            <button class="btn" id="close-button" title="Close">x</button>
+        </nav>
+    </section>
+
+    <div class="target">
+        <div class="ps-popup-inner">
+            <webview id="foo" src="http://www.anayainfantilyjuvenil.com/catalogos/capitulos_promocion/IJ00241701_9999990316.pdf" class="webview"></webview>
+        </div>
+    </div>
+    <div class="target">
+        <div class="ps-popup-inner">
+            <webview id="foo" src="https://docs.google.com/document/d/1deHeoW8eqPiMQp2QpLokVDhYM5Fy9Lu604vLHY01vYU/edit?usp=sharing" class="webview"></webview>
+        </div>
+    </div>
+    <div class="target">
+        <div class="ps-popup-inner">
+            <webview id="foo" src="https://docs.google.com/spreadsheets/d/1424GF5kCDwcpm4h2FD0EYrzQfncTs-E2m0Yjl237fGQ/edit?usp=sharing" class="webview"></webview>
+        </div>
+    </div>
+
+
+    <script src="js/gdocs.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/jqueryui.js"></script>
+    <script src="js/jqueryuirotable.js"></script>
+    <script src="js/angular-1.1.0.min.js"></script>
+    <script src="js/app.js"></script>
+
+
+</body>
+
+</html>

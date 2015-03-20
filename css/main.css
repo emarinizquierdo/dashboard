@@ -1,0 +1,85 @@
+@font-face {
+    font-family: 'Droid Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Droid Sans'), local('DroidSans'), url(DroidSans.woff) format('woff');
+}
+html, body {
+    margin: 0;
+    height: 100%;
+}
+body::-webkit-scrollbar {
+    height: 16px;
+    overflow: visible;
+    width: 16px;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, .1);
+    background-clip: padding-box;
+    border: solid transparent;
+    min-height: 28px;
+    padding: 100px 0 0;
+    box-shadow: inset 1px 1px 0 rgba(0, 0, 0, .1), inset 0 -1px 0 rgba(0, 0, 0, .07);
+    border-width: 1px 1px 1px 6px;
+}
+body::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+body::-webkit-scrollbar-button {
+    height: 0;
+    width: 0;
+}
+::-webkit-scrollbar-track {
+    background-clip: padding-box;
+    border: solid transparent;
+    border-width: 0 0 0 4px;
+}
+body::-webkit-scrollbar-corner {
+    background: transparent;
+}
+body {
+    padding: 0 15px 15px 15px;
+    overflow: hidden;
+    font-family: 'Droid Sans', sans-serif;
+}
+body.dropping > #main {
+    -webkit-filter: blur(2px);
+}
+.ui-rotatable-handle {
+    height: 23px;
+    width: 25px;
+    cursor: pointer;
+    background-image: url(../img/rotate_24.png);
+    left: 2px;
+    bottom: 2px;
+    opacity: 0.5;
+    position: absolute;
+}
+.target {
+    float: left;
+    height: 500px;
+    width: 400px;
+    margin:10px;
+}
+
+.webview {
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: hidden;
+    -webkit-box-shadow: 0 0 11px 1px #999999;
+    box-shadow: 0 0 11px 1px #999999;
+}
+.ps-popup-inner {
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    margin: 0px;
+    padding: 10px;
+    overflow: hidden;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    cursor: all-scroll;
+    box-sizing: border-box;
+}
