@@ -16,7 +16,7 @@ limitations under the License.
 
 Author: Eric Bidelman (ericbidelman@chromium.org)
 -->
-<html data-ng-app="gDriveApp" ng-csp="">
+<html ng-csp="">
 
 <head>
     <meta charset="utf-8" />
@@ -37,6 +37,23 @@ Author: Eric Bidelman (ericbidelman@chromium.org)
         </nav>
     </section>
 
+
+    <h1>Drive Realtime API :: quickstart</h1>
+
+  <button id="authorizeButton" disabled>You must authorize</button>
+
+  <p>These text areas are on the same page. You can also
+  <a href="#" onclick="window.open(window.location.href);return false;">
+  open them on separate users' browsers</a> and they will remain synchronized.</p>
+
+  <!-- Text areas that will be used as our collaborative controls. -->
+  <textarea id="editor1" rows="15" cols="50" disabled="true"></textarea>
+  <textarea id="editor2" rows="15" cols="50" disabled="true"></textarea>
+  <br />
+
+  <!-- Undo and redo buttons. -->
+  <button id="undoButton" disabled>Undo</button>
+  <button id="redoButton" disabled>Redo</button>
     <div class="target">
         <div class="ps-popup-inner">
             <webview id="foo" src="http://www.anayainfantilyjuvenil.com/catalogos/capitulos_promocion/IJ00241701_9999990316.pdf" class="webview"></webview>
@@ -53,7 +70,12 @@ Author: Eric Bidelman (ericbidelman@chromium.org)
         </div>
     </div>
 
-
+    
+    <script src="js/gapicallback.js"></script>
+    <script src="js/gapi.js"></script>
+    
+    <script src="js/googleapi.js"></script>
+    <script src="js/rtclient.js"></script>
     <script src="js/gdocs.js"></script>
     <script src="js/jquery.js"></script>
     <script src="js/jqueryui.js"></script>
